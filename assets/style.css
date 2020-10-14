@@ -49,9 +49,52 @@ li a {
     color: var(--teal);
 }
 
+.bannerImage {
+    display: flex;
+    background-image: url('/Client-Portfolio/assets/model\ banner.jpg');
+    height: 300px;
+}
+
+/*  */
+.bannerText {
+    display: flex;
+    justify-content: flex-start;
+    align-self: flex-end;
+    background: var(--teal);
+    color: var(--darkgray);
+    margin: 0 0 30px 40px;
+    padding: 10px;
+}
+
+/*  */
+.bannerText h3 {
+    margin: 0;
+}
 main {
     display: flex;
     flex: 1;
     flex-wrap: wrap;
+    color: var(--paleNavy);
     width: 100%;
+}
+
+main section {
+    display: inline-flex;
+    justify-content: center;
+}
+
+main h1 {
+    border-right: 3px solid;
+    padding: 10px 10px 10px 0;
+    margin-left: 100px;
+    text-align: right;
+    font-size: xx-large;
+}
+
+#aboutme p {
+    border: 0px solid;
+    margin: 15px 50px 20px 30px;
+    justify-content: center;
+    align-self: center;
+    font-size: x-small;
 }
