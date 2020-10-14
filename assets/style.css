@@ -51,7 +51,7 @@ li a {
 
 .bannerImage {
     display: flex;
-    background-image: url('/Client-Portfolio/assets/model\ banner.jpg');
+    background-image: url('/assets/model\ banner.jpg');
     height: 300px;
 }
 
@@ -72,15 +72,15 @@ li a {
 }
 main {
     display: flex;
-    flex: 1;
+    flex: 1 0 1;
     flex-wrap: wrap;
     color: var(--paleNavy);
-    width: 100%;
+    width: 90%;
+    margin: 0;
 }
 
 main section {
     display: inline-flex;
-    justify-content: center;
 }
 
 main h1 {
@@ -89,12 +89,31 @@ main h1 {
     margin-left: 100px;
     text-align: right;
     font-size: xx-large;
+    align-items: flex-start;
 }
 
 #aboutme p {
-    border: 0px solid;
     margin: 15px 50px 20px 30px;
     justify-content: center;
     align-self: center;
     font-size: x-small;
+}
+
+#work div {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainproject img{
+    max-height: 400px;
+    flex: 1 0 24rem;
+}
+
+.otherWork img {
+    display: inline-flex;
+    flex: 1 0 24rem;
+    height: 200px;
 }
