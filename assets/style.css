@@ -53,6 +53,7 @@ li a {
     display: flex;
     background-image: url('/assets/model\ banner.jpg');
     height: 300px;
+    flex: 0 1 1;
 }
 
 /*  */
@@ -99,21 +100,39 @@ main h1 {
     font-size: x-small;
 }
 
-#work div {
+#work .projects {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+    flex-flow: row wrap;
     align-items: center;
     justify-content: center;
+    width: 100%;
 }
 
-.mainproject img{
-    max-height: 400px;
-    flex: 1 0 24rem;
+.projects img {
+    border: 3px solid var(-teal);
 }
 
-.otherWork img {
-    display: inline-flex;
-    flex: 1 0 24rem;
-    height: 200px;
+.mainProject img{
+    flex: 0 1 1;
+    width: 100%;
 }
+
+.sideProjects img {
+    flex: 1 0 2rem;
+    width: 50%;
+    
+}
+
+/* .projecttext {
+    justify-content: flex-start;
+    align-self: flex-end;
+    background: var(--teal);
+    color: var(--darkgray);
+    margin: 0;
+    padding: 10px;
+    position: relative;
+    bottom: 10px;
+    left: 10px;
+} */
+
+footer
