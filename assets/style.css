@@ -10,6 +10,8 @@
 * {
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -92,23 +94,27 @@ main {
 
 main section {
     display: flex;
-    width: 100%;
+    width: 80%;
     clear: both;
     overflow: hidden;
     margin-bottom: 20px;
 }
 
-main h1 {
+.column_left {
     display: flex;
-    margin: 0 10px 0 0;
+    margin: 0;
+    padding: 10px 10px 0 0;
     text-align: right;
-    font-size: xx-large;
+    word-wrap: normal;
+    font-size: 1.5em;
     align-items: flex-start;
     justify-content: flex-end;
     width: 25%;
 }
 
-p, .workGrid, #contactme ul{
+.column_right{
+    display: flex;
+    flex-flow: row wrap;
     border-left: 3px solid var(--paleNavy);
     width: 100%;
     justify-content: center;
@@ -119,16 +125,15 @@ p, .workGrid, #contactme ul{
     margin: 0;
     justify-content: center;
     align-self: center;
-    font-size: x-small;
+    font-size: 0.75em;
     padding: 20px;
 }
 
 .project1 {
-    width: auto;
+    width: 100%;
     flex: 100%;
     background-image: url(/assets/bizwork.jpg);
     background-size: 100%;
-    height: ;
     margin: 10px;
     border: 3px solid var(--teal);
 }
@@ -149,10 +154,16 @@ p, .workGrid, #contactme ul{
     background: var(--teal);
 }
 
-.contactme {
+#contactme p {
     justify-content: space-evenly;
     align-items: center;
-    width: 100%;
-    flex: row;
-    width: 100%;
+    width: 25%;
+    flex-flow: row wrap;
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+#contactme a {
+    text-decoration: underline;
+    color: var(--paleNavy);
 }
