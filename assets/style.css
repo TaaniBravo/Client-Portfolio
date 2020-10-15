@@ -35,8 +35,11 @@ header {
 }
 
 ul li {
+    /* Removes the bullets from the standard list design. */
     list-style-type: none;
+    /* Inline-flex allows for the list to be side by side rather than columned. */
     display: inline-flex;
+    /* Works intandum with display: inline-flex */
     flex-direction: row;
     margin-right: 5px;
     font-size: smaller;
@@ -45,6 +48,7 @@ ul li {
     padding: 0 10px 0 10px;
 }
 
+/* Needed this so that the nav bar on the site didn't have the standard underline decoration. */
 li a {
     text-decoration: none;
     color: var(--teal);
@@ -53,8 +57,10 @@ li a {
 .bannerImage {
     display: flex;
     background-image: url('/assets/model\ banner.jpg');
-    height: 300px;
-    flex: 0 1 1;
+    height: 33vh;
+    min-width: 100vh;
+    flex: 1;
+    margin-bottom: 40px;
 }
 
 /*  */
@@ -72,63 +78,81 @@ li a {
 .bannerText h3 {
     margin: 0;
 }
+
 main {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     color: var(--paleNavy);
-    width: 90%;
+    width: 100%;
     margin: 0;
+    align-items: center;
+    flex: 80%;
 }
 
 main section {
     display: flex;
     width: 100%;
+    clear: both;
+    overflow: hidden;
+    margin-bottom: 20px;
 }
 
 main h1 {
-    border-right: 3px solid;
-    padding: 10px 10px 10px 0;
-    margin-left: 100px;
+    display: flex;
+    margin: 0 10px 0 0;
     text-align: right;
     font-size: xx-large;
     align-items: flex-start;
-    height: 100%;
+    justify-content: flex-end;
+    width: 25%;
+}
+
+p, .workGrid, #contactme ul{
+    border-left: 3px solid var(--paleNavy);
+    width: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 #aboutme p {
-    margin: 15px 50px 20px 30px;
+    margin: 0;
     justify-content: center;
     align-self: center;
     font-size: x-small;
-}
-
-.workGrid {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+    padding: 20px;
 }
 
 .project1 {
-    flex: 0 1 1;
-    width: 89.25%;
+    width: auto;
+    flex: 100%;
     background-image: url(/assets/bizwork.jpg);
     background-size: 100%;
-    height: fit-content;
-    margin-bottom: 10px;
+    height: ;
+    margin: 10px;
+    border: 3px solid var(--teal);
 }
 
 /* Once actual projects are inserted this will need to be made into different classes so that there are different images for each of the projects. */
 .others {
     background-image: url(/assets/bizwork.jpg);
-    width: 44%;
+    width: auto;
     justify-content: center;
     align-items: center;
     margin: 5px;
+    border: 3px solid var(--teal);
+    flex: 33%;
 }
 
-#contactme li {
+.projecttext {
+    color: white;
+    background: var(--teal);
+}
+
+.contactme {
     justify-content: space-evenly;
     align-items: center;
+    width: 100%;
+    flex: row;
+    width: 100%;
 }
