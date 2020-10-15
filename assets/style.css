@@ -1,3 +1,4 @@
+/* The color palette for the portfolio for easy plugin. */
 :root {
     --black: #1c1d21;
     --paleNavy: #445877;
@@ -73,7 +74,6 @@ li a {
 }
 main {
     display: flex;
-    flex: 1 0 1;
     flex-wrap: wrap;
     color: var(--paleNavy);
     width: 90%;
@@ -81,7 +81,8 @@ main {
 }
 
 main section {
-    display: inline-flex;
+    display: flex;
+    width: 100%;
 }
 
 main h1 {
@@ -91,6 +92,7 @@ main h1 {
     text-align: right;
     font-size: xx-large;
     align-items: flex-start;
+    height: 100%;
 }
 
 #aboutme p {
@@ -100,7 +102,7 @@ main h1 {
     font-size: x-small;
 }
 
-#work .projects {
+.workGrid {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
@@ -108,31 +110,25 @@ main h1 {
     width: 100%;
 }
 
-.projects img {
-    border: 3px solid var(-teal);
-}
-
-.mainProject img{
+.project1 {
     flex: 0 1 1;
-    width: 100%;
+    width: 89.25%;
+    background-image: url(/assets/bizwork.jpg);
+    background-size: 100%;
+    height: fit-content;
+    margin-bottom: 10px;
 }
 
-.sideProjects img {
-    flex: 1 0 2rem;
-    width: 50%;
-    
+/* Once actual projects are inserted this will need to be made into different classes so that there are different images for each of the projects. */
+.others {
+    background-image: url(/assets/bizwork.jpg);
+    width: 44%;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
 }
 
-/* .projecttext {
-    justify-content: flex-start;
-    align-self: flex-end;
-    background: var(--teal);
-    color: var(--darkgray);
-    margin: 0;
-    padding: 10px;
-    position: relative;
-    bottom: 10px;
-    left: 10px;
-} */
-
-footer
+#contactme li {
+    justify-content: space-evenly;
+    align-items: center;
+}
