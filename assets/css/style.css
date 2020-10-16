@@ -148,10 +148,8 @@ main section {
     align-items: flex-end;
 }
 
-/* Once actual projects are inserted this will need to be made into different classes so that there are different images for each of the projects. */
-.project2 {
+.project2, .project4 {
     display: inline-flex;
-    background-image: url('/assets/images/online-reputation-management.jpg');
     background-size: cover;
     height: 20vh;
     width: 50%;
@@ -160,45 +158,34 @@ main section {
     border: 5px solid var(--teal);
     justify-content: flex-start;
     align-items: flex-end;
+}
+
+.project3, .project5 {
+    display: inline-flex;
+    background-size: cover;
+    height: 20vh;
+    width: 50%;
+    flex: 40%;
+    margin: 0 20px 20px 20px;
+    border: 5px solid var(--teal);
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.project2 {
+    background-image: url("/assets/images/online-reputation-management.jpg");
 }
 
 .project3 {
-    display: inline-flex;
-    background-image: url('/assets/images/search-engine-optimization.jpg');
-    background-size: cover;
-    height: 20vh;
-    width: 50%;
-    flex: 40%;
-    margin: 0 20px 20px 20px;
-    border: 5px solid var(--teal);
-    justify-content: flex-start;
-    align-items: flex-end;
+    background-image: url("/assets/images/search-engine-optimization.jpg");
 }
 
-.project4 {
-    display: inline-flex;
-    background-image: url('/assets/images/social-media-marketing.jpg');
-    background-size: cover;
-    height: 20vh;
-    width: 50%;
-    flex: 40%;
-    margin: 0 0 20px 20px;
-    border: 5px solid var(--teal);
-    justify-content: flex-start;
-    align-items: flex-end;
+.project4 { 
+    background-image: url("/assets/images/social-media-marketing.jpg");
 }
 
 .project5 {
-    display: inline-flex;
-    background-image: url('/assets/images/bizwork.jpg');
-    background-size: cover;
-    height: 20vh;
-    width: 50%;
-    flex: 40%;
-    margin: 0 20px 20px 20px;
-    border: 5px solid var(--teal);
-    justify-content: flex-start;
-    align-items: flex-end;
+    background-image: url("/assets/images/coding.jpg");
 }
 
 .projecttext {
@@ -227,4 +214,13 @@ main section {
     text-decoration: none;
     color: var(--paleNavy);
     justify-content: space-evenly;
+}
+
+@media screen and (max-width: 667px) {
+    * {
+        font-size: 0.9em;
+    }
+
+    .project2, .project3
+
 }
