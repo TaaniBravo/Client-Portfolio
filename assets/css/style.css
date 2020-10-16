@@ -34,9 +34,10 @@ header {
     padding: 5px 5px 5px 60px;
     background: #92ccce;
     color: var(--darkgray);
+    font-size: 2em;
 }
 
-ul li {
+nav ul li {
     /* Removes the bullets from the standard list design. */
     list-style-type: none;
     /* Inline-flex allows for the list to be side by side rather than columned. */
@@ -51,14 +52,14 @@ ul li {
 }
 
 /* Needed this so that the nav bar on the site didn't have the standard underline decoration. */
-li a {
+nav li a {
     text-decoration: none;
     color: var(--teal);
 }
 
 .bannerImage {
     display: flex;
-    background-image: url('/assets/model\ banner.jpg');
+    background-image: url('/assets/images/model\ banner.jpg');
     background-size: cover;
     height: 33vh;
     width: 100%;
@@ -108,7 +109,7 @@ main section {
     padding: 10px 10px 0 0;
     text-align: right;
     word-wrap: normal;
-    font-size: 1.5em;
+    font-size: 2em;
     align-items: flex-start;
     justify-content: flex-end;
     width: 25%;
@@ -128,16 +129,15 @@ main section {
 }
 
 #aboutme p {
-    margin: 0;
     justify-content: center;
     align-self: center;
     font-size: 0.75em;
-    padding: 20px;
+    margin: 20px;
 }
 
 .project1 {
     display: flex;
-    background-image: url('/assets/digital-marketing-meeting.jpg');
+    background-image: url('/assets/images/digital-marketing-meeting.jpg');
     background-size: cover;
     height: 60vh;
     width: auto;
@@ -151,46 +151,54 @@ main section {
 /* Once actual projects are inserted this will need to be made into different classes so that there are different images for each of the projects. */
 .project2 {
     display: inline-flex;
-    background-image: url('/assets/digital-marketing-meeting.jpg');
+    background-image: url('/assets/images/online-reputation-management.jpg');
     background-size: cover;
     height: 20vh;
-    min-width: 50%;
+    width: 50%;
     flex: 40%;
-    margin-bottom: 20px;
-    border: 3px solid var(--teal);
+    margin: 0 0 20px 20px;
+    border: 5px solid var(--teal);
+    justify-content: flex-start;
+    align-items: flex-end;
 }
 
 .project3 {
     display: inline-flex;
-    background-image: url('/assets/digital-marketing-meeting.jpg');
+    background-image: url('/assets/images/search-engine-optimization.jpg');
     background-size: cover;
     height: 20vh;
-    min-width: 50%;
+    width: 50%;
     flex: 40%;
-    margin-bottom: 20px;
-    border: 3px solid var(--teal);
+    margin: 0 20px 20px 20px;
+    border: 5px solid var(--teal);
+    justify-content: flex-start;
+    align-items: flex-end;
 }
 
 .project4 {
     display: inline-flex;
-    background-image: url('/assets/digital-marketing-meeting.jpg');
+    background-image: url('/assets/images/social-media-marketing.jpg');
     background-size: cover;
     height: 20vh;
-    min-width: 50%;
+    width: 50%;
     flex: 40%;
-    margin-bottom: 20px;
-    border: 3px solid var(--teal);
+    margin: 0 0 20px 20px;
+    border: 5px solid var(--teal);
+    justify-content: flex-start;
+    align-items: flex-end;
 }
 
 .project5 {
     display: inline-flex;
-    background-image: url('/assets/digital-marketing-meeting.jpg');
+    background-image: url('/assets/images/bizwork.jpg');
     background-size: cover;
     height: 20vh;
-    min-width: 50%;
+    width: 50%;
     flex: 40%;
-    margin-bottom: 20px;
-    border: 3px solid var(--teal);
+    margin: 0 20px 20px 20px;
+    border: 5px solid var(--teal);
+    justify-content: flex-start;
+    align-items: flex-end;
 }
 
 .projecttext {
@@ -204,16 +212,19 @@ main section {
     margin: 0 0 20px 0;
 }
 
-#contactme p {
-    justify-content: space-evenly;
+#contactme li {
+    display: inline-flex;
+    list-style-type: none;
+    justify-content: center;
     align-items: center;
     width: 25%;
-    flex-flow: row wrap;
-    padding-left: 20px;
+    flex-flow: row;
     cursor: pointer;
+    color: var(--paleNavy);
 }
 
 #contactme a {
-    text-decoration: underline;
+    text-decoration: none;
     color: var(--paleNavy);
+    justify-content: space-evenly;
 }
