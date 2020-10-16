@@ -7,6 +7,7 @@
     --darkgray: #31343d;
 }
 
+/* Gives the page structure and sets the font throughout the page as Arial family. */
 * {
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
@@ -20,21 +21,25 @@ body {
     padding: 0;
 }
 
+/* Our first flex box in the code. */
 header {
     display: flex;
     flex: 1;
+    /* Space-between allows the items to sit on opposite ends of the page. */
     justify-content: space-between;
     align-items: center;
     background: var(--darkgray);
     padding: 0 50px 0 0;
 }
 
+/* The title aka my name. */
 .name {
     margin: 10px 0;
+    /* A large padding to the left side so that it looks like the template. */
     padding: 5px 5px 5px 60px;
     background: #92ccce;
     color: var(--darkgray);
-    font-size: 2em;
+    font-size: 2.5em;
 }
 
 nav ul li {
@@ -45,7 +50,9 @@ nav ul li {
     /* Works intandum with display: inline-flex */
     flex-direction: row;
     margin-right: 5px;
+    /* Makes the font not so large that its overbearing. */
     font-size: smaller;
+    /* When your on the links the cursor will turn into a pointer. */
     cursor: pointer;
     border-bottom: 3px solid var(--teal);
     padding: 0 10px 0 10px;
@@ -60,14 +67,17 @@ nav li a {
 .bannerImage {
     display: flex;
     background: url('/assets/images/model\ banner.jpg');
+    /* At the large size this background-size: auto helped making the photo fit but not get pixelated. */
     background-size: auto;
+    /* vh so that the banner only will take up to 33% of the view height. */
     height: 33vh;
     width: 100%;
     flex: 1;
+    /* Need margin so the main tag was not hugging the banner. */
     margin-bottom: 40px;
 }
 
-/*  */
+/* This is the little subtitle. Works well with being shrunken down */
 .bannerText {
     display: flex;
     justify-content: flex-start;
@@ -78,11 +88,12 @@ nav li a {
     padding: 10px;
 }
 
-/*  */
+/* The text box was getting some weird margin so I needed to target the h3 tag itself. */
 .bannerText h3 {
     margin: 0;
 }
 
+/* Sets the tone for most of the content. */
 main {
     display: flex;
     flex-wrap: wrap;
@@ -92,14 +103,13 @@ main {
     margin: 0;
     align-items: center;
     flex: 100%;
+    /* this property allows the contenct of the boxes to fit within the selectors and the value ensures it doesn't create scroll wheels when changing screen size. */
     overflow: hidden;
 }
-
 main section {
     display: flex;
+    /* A width of 80% ensures that the content doesn't stretch across the whole page and look to elongated. */
     width: 80%;
-    clear: both;
-    overflow: hidden;
     margin-bottom: 20px;
 }
 
@@ -107,20 +117,21 @@ main section {
     display: flex;
     margin: 0;
     padding: 10px 10px 0 0;
+    /* Even though I have justify-content, the text didn't want to hug the right side without this property. */
     text-align: right;
     word-wrap: normal;
     font-size: 2em;
+    /* pushes the items to the top of the block. Best shown with the h1 tag Work */
     align-items: flex-start;
+    /* used this to ensure that the text was going to sit at the end of the block. */
     justify-content: flex-end;
+    /* With a width of 18% the text wrapped nicely and didn't get weird at smaller sizes. */
     width: 25%;
-}
-
-.column_left h1 {
-    flex: 1 1 0;
 }
 
 .column_right{
     display: flex;
+    /* Flex flow allows the content to sit in a row rather than stack and also wrap the page and not go off of the viewable part. */
     flex-flow: row wrap;
     border-left: 3px solid var(--paleNavy);
     width: 100%;
@@ -128,27 +139,38 @@ main section {
     align-items: center;
 }
 
+#aboutme .column_right {
+    padding: 20px;
+}
+
+/* used this to make sure the p tag was sitting nicely in the middle of the block. as well as being spaced out well so its easy to read even with smaller font. */
 #aboutme p {
     justify-content: center;
     align-self: center;
     font-size: 0.75em;
-    margin: 20px;
+    line-height: 1.3;
 }
 
+/* Need this so that the links in the work section weren't all blue with standard underlines. */
 #work .column_right a {
     text-decoration: none;
     color: var(--darkgray)
 }
 
+/* The following project1, 2, 3, 4, 5 all follow a very similar structure to obtain the desired look. */
 .project1 {
     display: flex;
+    /* The all have this so that there is a slight tint to the background image applied. */
     background-image: linear-gradient(rgba(68, 88, 119, 0.5), rgba(68, 88, 119, 0.5)), url('/assets/images/digital-marketing-meeting.jpg');
+    /* The viewable height of the photo is 50% of the page. */
     height: 50vh;
+    /* Wanted this block to stretch across its parent. */
     width: 100%;
     flex: 100%;
     margin: 20px 20px 20px 20px;
 }
 
+/* in order for the smaller blocks to fit the page next to each other they needed to be a inline-flex box and width of 50% */
 .project2, .project4 {
     display: inline-flex;
     height: 20vh;
@@ -165,6 +187,7 @@ main section {
     margin: 0 20px 20px 20px;
 }
 
+/* These are photos for each of the banners so I could consolidate the rest of the properties. */
 .project2 {
     background-image: linear-gradient(rgba(68, 88, 119, 0.5), rgba(68, 88, 119, 0.5)), url("/assets/images/online-reputation-management.jpg");
 }
@@ -189,9 +212,31 @@ main section {
     border: 5px solid var(--teal);
 }
 
+/* These hover properties allow for the images to remove the color tint when you are hovering the page. */
+.project1:hover {
+    background-image: url('/assets/images/digital-marketing-meeting.jpg');
+} 
+
+.project2:hover {
+    background-image: url("/assets/images/online-reputation-management.jpg");
+}
+
+.project3:hover {
+    background-image: url("/assets/images/search-engine-optimization.jpg");
+}
+
+.project4:hover {
+    background-image: url("/assets/images/social-media-marketing.jpg");
+}
+
+.project5:hover {
+    background-image: url("/assets/images/coding.jpg");
+}
+
 .projecttext {
     color: white;
     display: flex;
+    /* used flex-flow so that the text had a title and subtitle effect. */
     flex-flow: column wrap;
     justify-content: flex-start;
     align-self: bottom;
@@ -206,6 +251,7 @@ main section {
     padding-top: 2px;
 }
 
+/* Needed to make this an inline-flex as well so that the list would sit next to each other. */
 #contactme ul {
     display: inline-flex;
     list-style-type: none;
@@ -228,8 +274,10 @@ main section {
     justify-content: space-evenly;
 }
 
+/* This sizing is fit best for the iPad Pro but works with all tablets. */
 @media screen and (max-width: 1024px) {
 
+    /* I switched the size to cover and the position is edited to ensure that my photo actuall contains me. */
     .bannerImage {
         background-size: cover;
         background-position: -200px 0;
@@ -261,6 +309,7 @@ main section {
         font-size: 1.25em;
     }
 
+ /* Made all the project banners 100% width as it looked better, I just made sure the first was a little bigger. */
     .project1, .project2, .project3, .project4, .project5 {
         height: 25vh;
         width: 100%;
@@ -286,6 +335,7 @@ main section {
     }
 }
 
+/* This sizing is fit best for the iPhone X but works with all phones. */
 @media screen and (max-width: 667px) {
 
     nav ul {
@@ -335,6 +385,7 @@ main section {
         flex-flow: column wrap;
     }
 
+    /* add some box shadow to make sure it is known that these are buttons because I got rid of the border underlines at smaller screen sizes. */
     #contactme li {
         box-shadow: 5px 5px 5px var(--darkgray);
     }
