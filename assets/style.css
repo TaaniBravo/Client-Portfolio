@@ -59,8 +59,9 @@ li a {
 .bannerImage {
     display: flex;
     background-image: url('/assets/model\ banner.jpg');
+    background-size: cover;
     height: 33vh;
-    min-width: 100vh;
+    width: 100%;
     flex: 1;
     margin-bottom: 40px;
 }
@@ -90,6 +91,7 @@ main {
     margin: 0;
     align-items: center;
     flex: 80%;
+    overflow: hidden;
 }
 
 main section {
@@ -112,6 +114,10 @@ main section {
     width: 25%;
 }
 
+.column_left h1 {
+    flex: 1 1 0;
+}
+
 .column_right{
     display: flex;
     flex-flow: row wrap;
@@ -130,28 +136,72 @@ main section {
 }
 
 .project1 {
-    width: 100%;
+    display: flex;
+    background-image: url('/assets/digital-marketing-meeting.jpg');
+    background-size: cover;
+    height: 60vh;
+    width: auto;
     flex: 100%;
-    background-image: url(/assets/bizwork.jpg);
-    background-size: 100%;
-    margin: 10px;
-    border: 3px solid var(--teal);
+    margin: 20px 20px 20px 20px;
+    border: 5px solid var(--teal);
+    justify-content: flex-start;
+    align-items: flex-end;
 }
 
 /* Once actual projects are inserted this will need to be made into different classes so that there are different images for each of the projects. */
-.others {
-    background-image: url(/assets/bizwork.jpg);
-    width: auto;
-    justify-content: center;
-    align-items: center;
-    margin: 5px;
+.project2 {
+    display: inline-flex;
+    background-image: url('/assets/digital-marketing-meeting.jpg');
+    background-size: cover;
+    height: 20vh;
+    min-width: 50%;
+    flex: 40%;
+    margin-bottom: 20px;
     border: 3px solid var(--teal);
-    flex: 33%;
+}
+
+.project3 {
+    display: inline-flex;
+    background-image: url('/assets/digital-marketing-meeting.jpg');
+    background-size: cover;
+    height: 20vh;
+    min-width: 50%;
+    flex: 40%;
+    margin-bottom: 20px;
+    border: 3px solid var(--teal);
+}
+
+.project4 {
+    display: inline-flex;
+    background-image: url('/assets/digital-marketing-meeting.jpg');
+    background-size: cover;
+    height: 20vh;
+    min-width: 50%;
+    flex: 40%;
+    margin-bottom: 20px;
+    border: 3px solid var(--teal);
+}
+
+.project5 {
+    display: inline-flex;
+    background-image: url('/assets/digital-marketing-meeting.jpg');
+    background-size: cover;
+    height: 20vh;
+    min-width: 50%;
+    flex: 40%;
+    margin-bottom: 20px;
+    border: 3px solid var(--teal);
 }
 
 .projecttext {
     color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-self: bottom;
     background: var(--teal);
+    color: var(--darkgray);
+    padding: 10px;
+    margin: 0 0 20px 0;
 }
 
 #contactme p {
