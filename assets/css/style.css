@@ -142,7 +142,7 @@ main section {
 
 .project1 {
     display: flex;
-    background-image: url('/assets/images/digital-marketing-meeting.jpg');
+    background-image: linear-gradient(rgba(68, 88, 119, 0.5), rgba(68, 88, 119, 0.5)), url('/assets/images/digital-marketing-meeting.jpg');
     height: 50vh;
     width: 100%;
     flex: 100%;
@@ -166,19 +166,19 @@ main section {
 }
 
 .project2 {
-    background-image: url("/assets/images/online-reputation-management.jpg");
+    background-image: linear-gradient(rgba(68, 88, 119, 0.5), rgba(68, 88, 119, 0.5)), url("/assets/images/online-reputation-management.jpg");
 }
 
 .project3 {
-    background-image: url("/assets/images/search-engine-optimization.jpg");
+    background-image: linear-gradient(rgba(68, 88, 119, 0.5), rgba(68, 88, 119, 0.5)), url("/assets/images/search-engine-optimization.jpg");
 }
 
 .project4 { 
-    background-image: url("/assets/images/social-media-marketing.jpg");
+    background-image: linear-gradient(rgba(68, 88, 119, 0.5), rgba(68, 88, 119, 0.5)), url("/assets/images/social-media-marketing.jpg");
 }
 
 .project5 {
-    background-image: url("/assets/images/coding.jpg");
+    background-image: linear-gradient(rgba(68, 88, 119, 0.5), rgba(68, 88, 119, 0.5)), url("/assets/images/coding.jpg");
 }
 
 .project1, .project2, .project3, .project4, .project5 {
@@ -324,6 +324,10 @@ main section {
         width: 100%;
         margin: 10px;
         flex: 100%;
+    }
+
+    .projecttext p {
+        font-size: .5em;
     }
 
     #contactme ul {
