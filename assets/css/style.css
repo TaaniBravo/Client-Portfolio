@@ -226,11 +226,11 @@ main section {
 }
 
 .project4:hover {
-    background-image: url("..images/social-media-marketing.jpg");
+    background-image: url("../images/social-media-marketing.jpg");
 }
 
 .project5:hover {
-    background-image: url("..images/coding.jpg");
+    background-image: url("../images/coding.jpg");
 }
 
 .projecttext {
