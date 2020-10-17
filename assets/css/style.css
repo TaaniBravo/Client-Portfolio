@@ -66,7 +66,7 @@ nav li a {
 
 .bannerImage {
     display: flex;
-    background: url('/assets/images/model\ banner.jpg');
+    background: url('../images/model\ banner.jpg');
     /* At the large size this background-size: auto helped making the photo fit but not get pixelated. */
     background-size: auto;
     /* vh so that the banner only will take up to 33% of the view height. */
@@ -161,7 +161,7 @@ main section {
 .project1 {
     display: flex;
     /* The all have this so that there is a slight tint to the background image applied. */
-    background-image: linear-gradient(rgba(68, 88, 119, 0.5), rgba(68, 88, 119, 0.5)), url('/assets/images/digital-marketing-meeting.jpg');
+    background-image: linear-gradient(rgba(68, 88, 119, 0.5), rgba(68, 88, 119, 0.5)), url('../images/digital-marketing-meeting.jpg');
     /* The viewable height of the photo is 50% of the page. */
     height: 50vh;
     /* Wanted this block to stretch across its parent. */
@@ -189,19 +189,19 @@ main section {
 
 /* These are photos for each of the banners so I could consolidate the rest of the properties. */
 .project2 {
-    background-image: linear-gradient(rgba(68, 88, 119, 0.5), rgba(68, 88, 119, 0.5)), url("/assets/images/online-reputation-management.jpg");
+    background-image: linear-gradient(rgba(68, 88, 119, 0.5), rgba(68, 88, 119, 0.5)), url("../images/online-reputation-management.jpg");
 }
 
 .project3 {
-    background-image: linear-gradient(rgba(68, 88, 119, 0.5), rgba(68, 88, 119, 0.5)), url("/assets/images/search-engine-optimization.jpg");
+    background-image: linear-gradient(rgba(68, 88, 119, 0.5), rgba(68, 88, 119, 0.5)), url("../images/search-engine-optimization.jpg");
 }
 
 .project4 { 
-    background-image: linear-gradient(rgba(68, 88, 119, 0.5), rgba(68, 88, 119, 0.5)), url("/assets/images/social-media-marketing.jpg");
+    background-image: linear-gradient(rgba(68, 88, 119, 0.5), rgba(68, 88, 119, 0.5)), url("../images/social-media-marketing.jpg");
 }
 
 .project5 {
-    background-image: linear-gradient(rgba(68, 88, 119, 0.5), rgba(68, 88, 119, 0.5)), url("/assets/images/coding.jpg");
+    background-image: linear-gradient(rgba(68, 88, 119, 0.5), rgba(68, 88, 119, 0.5)), url("../images/coding.jpg");
 }
 
 .project1, .project2, .project3, .project4, .project5 {
@@ -214,23 +214,23 @@ main section {
 
 /* These hover properties allow for the images to remove the color tint when you are hovering the page. */
 .project1:hover {
-    background-image: url('/assets/images/digital-marketing-meeting.jpg');
+    background-image: url('../images/digital-marketing-meeting.jpg');
 } 
 
 .project2:hover {
-    background-image: url("/assets/images/online-reputation-management.jpg");
+    background-image: url("../images/online-reputation-management.jpg");
 }
 
 .project3:hover {
-    background-image: url("/assets/images/search-engine-optimization.jpg");
+    background-image: url("../images/search-engine-optimization.jpg");
 }
 
 .project4:hover {
-    background-image: url("/assets/images/social-media-marketing.jpg");
+    background-image: url("..images/social-media-marketing.jpg");
 }
 
 .project5:hover {
-    background-image: url("/assets/images/coding.jpg");
+    background-image: url("..images/coding.jpg");
 }
 
 .projecttext {
